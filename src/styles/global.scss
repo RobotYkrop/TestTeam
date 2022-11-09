@@ -1,0 +1,103 @@
+html {
+  box-sizing: border-box;
+  /* шрифт указываем в корне, чтобы использовать 'rem' во всех компонентах, основываясь на базовом размере шрифта */
+  font: normal 14px/1.5 "Inter", sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  background-color: var(--page-bg);
+  font: inherit;
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+/* layout limiter */
+#root {
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+}
+
+.layout {
+  display: flex;
+  height: 100%;
+  flex-flow: column nowrap;
+  overflow-y: auto;
+
+  .layout_page {
+    display: flex;
+    flex-grow: 1;
+
+    main {
+      display: flex;
+      flex-grow: inherit;
+      justify-content: center;
+      padding: 20px;
+    }
+  }
+}
+
+*:not(button) > a {
+  text-decoration: none;
+  color: var(--theme-color);
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--theme-color-highlight);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.67rem;
+  font-weight: 600; /* SemiBold */
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.17rem;
+  font-weight: 600; /* SemiBold */
+  text-align: start;
+}
+
+/* anti-global override */
+/* a {
+  color: var(--text-color) !important;
+
+  &:hover {
+    color: var(--theme-color-highlight) !important;
+  }
+} */
+
+*:not(button) > .anticon {
+  /* любому элементу, примыкающему к иконке справа, делается отступ слева */
+  & + * {
+    margin-left: 10px;
+  }
+
+  svg {
+    width: 1.29rem;
+    height: 1.29rem;
+    fill: var(--text-color);
+  }
+}
+.anticon svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+}
+
+.active {
+    border-bottom: 2px solid var(--theme-color);
+}

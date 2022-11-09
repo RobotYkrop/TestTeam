@@ -1,0 +1,28 @@
+
+.generic {
+	/* --width: `${width}px` */
+	/* --style: DataType.LineStyle */
+	color: var(--normal-color, #DDD);
+
+	&::after {
+		content: '';
+	}
+}
+
+.horizontal {
+	margin: 20px 0;
+
+	&::after {
+		display: block;
+		border-top: var(--width, 1px) var(--style, 'solid') currentColor;
+	}
+}
+
+.vertical {
+	margin: 0 20px;
+
+	&::after {
+		display: inline;
+		border-left: var(--width, 1px) var(--style, 'solid') currentColor;
+	}
+}

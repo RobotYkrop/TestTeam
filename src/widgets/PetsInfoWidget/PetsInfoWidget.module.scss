@@ -1,0 +1,17 @@
+$colorBlue: #69ade7;
+$colorWhite: #fff;
+.wrapper {
+    max-width: 840px;
+    margin: 40px auto;
+    border-radius: 5px;
+    
+    .panel {
+        border-radius: 5px;
+        background-color: $colorBlue;
+        text-align: center;
+
+        .title{
+            color: $colorWhite ;
+        }
+    }
+}

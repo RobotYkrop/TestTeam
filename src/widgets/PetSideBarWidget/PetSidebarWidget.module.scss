@@ -1,0 +1,126 @@
+
+.petsidebar {
+  width: 300px;
+
+  @media (max-width: 768px) {
+    max-width: 70px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    height: 40px;
+    background-color: var(--theme-color);
+    cursor: default;
+
+    .title {
+      flex-grow: 1;
+      text-align: center;
+      color: var(--text-color-alt);
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    span[aria-label="menu-unfold"] > svg {
+      fill: var(--text-color-alt);
+    }
+  }
+
+  .petlist {
+    padding: 10px;
+    list-style: none;
+
+    @media (max-width: 768px) {
+      padding: 10px 0;
+    }
+
+    .pet-checked {
+      background: var(--theme-color-faded);
+
+      .pet-avatar {
+        border: 1.5px solid var(--theme-color-highlight);
+      }
+    }
+
+    @media (min-width: 769px) {
+      .pet::after {
+        content: '';
+        width: 230px;
+        height: 1px;
+        background-color: var(--page-bg);
+        border-radius: 1px;
+        position: absolute;
+        transform: translate(40px, 20px);
+      }
+    }
+
+    .pet-checked,
+    .pet {
+      position: relative;
+      transition: .3s;
+      cursor: pointer;
+      height: 45px;
+      padding: 0 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 3px;
+
+      @media (max-width: 768px) {
+        padding: 0;
+      }
+
+      .pet-avatar {
+        width: 30px;
+        height: 30px;
+        background: var(--normal-color);
+        border-radius: 50%;
+
+        @media (max-width: 768px) {
+          margin: 0 auto;
+        }
+
+        span {
+          visibility: hidden;
+        }
+      }
+
+      .pet-name {
+        max-width: 200px;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      .open,
+      .closed {
+        color: var(--text-color);
+        transition: rotate .2s;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      .open {
+        rotate: 90deg;
+        transition: rotate .2s;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}

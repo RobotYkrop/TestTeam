@@ -1,0 +1,27 @@
+
+.box {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 0;
+	padding: 20px;
+	width: 100%;
+	height: 100%;
+	background: var(--block-bg);
+	border-radius: 3px;
+	transition: 0.25s ease-in-out;
+	transition-property: max-width, max-height;
+
+	.headline {
+		display: flex;
+		align-items: center;
+		margin: -20px -20px 20px -20px;
+		padding: 20px;
+		background-color: var(--theme-color-faded);
+		border-top-left-radius: var(--block-border-radius);
+		border-top-right-radius: var(--block-border-radius);
+		text-align: start;
+		font-size: 1.17rem;
+		font-weight: 600;
+		color: var(--text-color);
+	}
+}

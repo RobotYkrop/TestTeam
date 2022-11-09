@@ -1,0 +1,41 @@
+
+.wrap {
+	display: flex;
+	flex-grow: 1;
+
+	&_top-left,
+	&_top-center,
+	&_top-right {
+		align-items: start;
+	}
+
+	&_center-left,
+	&_center,
+	&_center-right {
+		align-items: center;
+	}
+
+	&_bottom-left,
+	&_bottom-center,
+	&_bottom-right {
+		align-items: end;
+	}
+
+	&_top-left,
+	&_center-left,
+	&_bottom-left {
+		justify-content: left;
+	}
+
+	&_top-center,
+	&_center,
+	&_bottom-center {
+		justify-content: center;
+	}
+
+	&_top-right,
+	&_center-right,
+	&_bottom-right {
+		justify-content: right;
+	}
+}

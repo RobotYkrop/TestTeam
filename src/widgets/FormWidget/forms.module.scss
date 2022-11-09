@@ -1,0 +1,101 @@
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    padding: 5px 0;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 10px;
+    color: var(--error-color);
+    padding-top: 5px;
+  }
+
+  .validation {
+    color: var(--error-color);
+    position: absolute;
+    top: 60px;
+    text-align: start;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  .data {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .checkbox {
+    position: relative;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+
+  .signin {
+    padding-top: 10px;
+    text-align: center;
+
+    a {
+      color: var(--theme-color);
+
+      &:hover {
+        color: var(--theme-color-highlight);
+      }
+    }
+  }
+
+  .input,
+  .negative {
+    border: 1px solid var(--normal-color);
+    border-radius: var(--block-border-radius);
+    padding: 8px 12px;
+    font-size: 1.14rem;
+
+    &:focus {
+      outline: 1px solid var(--theme-color);
+      border: 1px solid var(--theme-color);
+    }
+
+    & + label {
+      margin-top: 20px;
+    }
+  }
+
+  .input {
+    color: var(--text-color);
+
+    &:focus {
+      border: 1px solid var(--theme-color);
+    }
+  }
+
+  .input::placeholder {
+    color: var(--text-color-faded);
+  }
+
+  .negative {
+    color: var(--error-color);
+
+    &:focus {
+      border: 1px solid var(--error-color);
+    }
+  }
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: var(--text-color-faded);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: var(--text-color-faded);
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: var(--text-color-faded);
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: var(--text-color-faded);
+}
